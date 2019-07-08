@@ -15,11 +15,11 @@ f.close()
 
 lastN = s
 
-def send_to_topic(topc,content):
+def send_to_topic(topc,content,title):
     topic = topc
     message = messaging.Message(
         notification = messaging.Notification(
-           title='[Notice]',
+           title= title+"]",
            body=content
             ),
         topic=topic,
@@ -49,7 +49,8 @@ for content in div.find_all("li"):
             #print(delTAG)
             print(href)
             print(boardN)
-            send_to_topic("noti",delTAG)
+            delTAG2 = delTAG.split(']',maxsplit=1)
+            send_to_topic("noti",delTAG2[1],delTAG2[0])
 if ('-' not in tmp):
     lastN = tmp
 print('lastN :' + lastN)
