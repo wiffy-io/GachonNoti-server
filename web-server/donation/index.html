@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>가천 알림이 후원</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+       
+          </ul>
+        </nav>
+        <h3 class="text-muted">가천 알림이 후원</h3>
+      </div>
+
+<br>
+      <div class="jumbotron">
+
+        <p class="lead">
+		
+		<b>알림 서버를 유지하기 위해서는 <br>매달 일정량의 서버 비용이 지출됩니다.</b><br><br>
+		가천대학교 공지를 학생들에게 손쉽게 제공하고자 비영리 서비스를 시작하였습니다.<br><br>
+		하지만 매달 나가는 서버 비용은 큰 부담이 됩니다.<br><br>
+		이 앱이 도움이 된 학우분들께서는 소량의 후원을 해주시면 감사하겠습니다.<br><br>
+        <b>후원 받은 금액은 서버 비용 지출 이외에는 사용하지 않습니다.</b></p>
+		<br>
+		<a class="btn btn-lg btn-success" onclick="copyToClipboard()" role="button">●3333123280834●<br>카카오뱅크 박정호</a>
+   <h5>클릭시 계좌번호가 복사됩니다.</h5>
+      </div>
+
+<input id="coppy" type="hidden" value="3333123280834 카카오뱅크">
+
+	  <script>
+function copyToClipboard() {
+
+	 var input = document.createElement("textarea");
+  document.body.appendChild(input);
+  input.value = "3333123280834 카카오뱅크";
+  input.select();
+  //alert('asd')
+  
+	var isiOSDevice = navigator.userAgent.match(/ipad|iphone/i);
+
+	if (isiOSDevice) {
+	  
+		var editable = input.contentEditable;
+		var readOnly = input.readOnly;
+
+		input.contentEditable = true;
+		input.readOnly = false;
+
+		var range = document.createRange();
+		range.selectNodeContents(input);
+
+		var selection = window.getSelection();
+		selection.removeAllRanges();
+		selection.addRange(range);
+
+		input.setSelectionRange(0, 999999);
+		input.contentEditable = editable;
+		input.readOnly = readOnly;
+		//alert('asd1')
+
+	} else {
+	 	input.select();
+		//alert('asd2')
+	}
+
+	document.execCommand('copy');
+  document.body.removeChild(input);
+	alert("계좌번호가 복사되었습니다.\n3333123280834 카카오뱅크")
+}
+</script>
+
+      <footer class="footer">
+        <p>&copy; Wiffy 2019</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
